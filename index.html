@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <section id="con">
     <div class="page center">
-        <header><a class="next-btn" href="#page2">第二页</a></header>
-        <section>内容1</section>
+        <header><a class="next-btn" href="#page2">NEXT PAGE</a></header>
+        <section class="main">
+            CONTENT 1
+        </section>
+    
     </div>
     <div class="page center">
-        <header><a class="back-btn" href="#page1">第一页</a><a class="next-btn" href="#page3">第三页</a></header>
-        <section>内容2</section>
+        <header><a class="back-btn" href="#page1">FIRAT PAGE</a><a class="next-btn" href="#page3">NEXT PAGE</a></header>
+        <section class="main">
+            CONTENT 2
+        </section>
     </div>
     <div class="page center">
-        <header><a class="back-btn" href="#page1">第一页</a><a class="back-btn" href="#page2">第二页</a></header>
-        <section class="tab">内容3</section>
+        <header><a class="back-btn" href="#page1">FIRST PAGE</a><a class="back-btn" href="#page2">SECOND PAGE</a></header>
+        <section>CONTENT 3</section>
     </div>
 </section>
-
 <script src="zepto.min.js"></script>
 <script src="pageswitch.js"></script>
-<script src="zepto-touch.js"></script>
-
 <script>
-    
     var curHash = window.location.hash || '#page1',
         hashs = ['#page1','#page2','#page3'];
     
@@ -41,24 +41,6 @@
         curHash: curHash,
         hashs : hashs
     });
-
-    function nexthash(hash){
-        return hashs[hashs.indexOf(hash)+1];
-    }
-    function prehash(hash){
-        return hashs[hashs.indexOf(hash)-1];
-    }
-    $('#con').on('swipeRight',function(e){
-        if(prehash(location.hash)){
-            window.location = location.pathname + prehash(location.hash);
-        }
-    });
-    $('#con').on('swipeLeft',function(e){
-        if(nexthash(location.hash)){    
-            window.location = location.pathname + nexthash(location.hash);
-        }
-    });
-    
 </script>
 </body>
 </html>
