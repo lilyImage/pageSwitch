@@ -20,7 +20,7 @@ header{
     height: 40px;
     background-color: #62bb50;
 }
-#con{
+.switch-page-main{
     position: absolute;
     left: 0;right: 0;top: 0;bottom: 0;
     width: 100%;

@@ -66,7 +66,7 @@ function PageSwitcher(){
         for(var i=0; i<stateTree.length ;i++){
             if(stateTree[i] === obj.curHash){
                 start = 1;
-                currentPage = $($('.page')[i]).addClass('current');
+                currentPage = $($('.switch-page-main .page')[i]).addClass('current');
                 page = currentPage;
                 stateHistory.push(stateTree[i]);
             }
